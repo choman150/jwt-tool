@@ -2,3 +2,4 @@ User-agent: *
 Allow: /
 
 Sitemap: https://jwt.choman150.click/sitemap.xml
+Sitemap: http://sitemap.choman150.click/sitemap_jwt.xml
