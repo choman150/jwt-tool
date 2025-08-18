@@ -24,6 +24,7 @@ export default function App({ Component, pageProps }) {
                 {/* <meta name="google-adsense-account" content="ca-pub-7141076584440289" /> */}
                 <link rel="canonical" href="https://jwt.choman150.click" />
                 <link rel="icon" href="/favicon.ico" />
+                <meta name="monetag" content="aa6d902b00779634855e673864e8880a" />
             </Head>
             <main className="p-6 max-w-5xl mx-auto" role="main">
                 <Menu />
