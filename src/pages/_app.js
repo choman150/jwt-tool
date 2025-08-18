@@ -1,4 +1,5 @@
 // pages/_app.js
+import Script from "next/script";
 import "../styles/globals.css";
 import Head from "next/head";
 import { Analytics } from "@vercel/analytics/next";
@@ -29,6 +30,7 @@ export default function App({ Component, pageProps }) {
             <main className="p-6 max-w-5xl mx-auto" role="main">
                 <Menu />
                 <Component {...pageProps} />
+                <Script src="https://fpyf8.com/88/tag.min.js" data-zone="164321" async data-cfasync="false" strategy="afterInteractive" />
                 <Footer />
             </main>
             <Analytics />
