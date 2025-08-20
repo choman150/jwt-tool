@@ -2,8 +2,6 @@
 
 An open-source, browser-based tool to encode and decode JSON Web Tokens (JWT) using the [`jose`](https://github.com/panva/jose) library. Built with Next.js and Tailwind CSS.
 
-Visit https://jwt.choman150.click
-
 ## 🔍 Features
 
 -   🔐 Encode JWT using custom Header, Payload, and Secret
