@@ -1,5 +1,5 @@
 {
-    "name": "json-converter",
+    "name": "jwt-tool",
     "version": "0.1.0",
     "private": true,
     "scripts": {
