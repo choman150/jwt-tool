@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 import { SignJWT, jwtVerify, decodeJwt } from "jose";
+import Script from "next/script";
 
 export default function JWTTool() {
     const [token, setToken] = useState("");
@@ -40,31 +41,33 @@ export default function JWTTool() {
     };
 
     return (
-        <div className="space-y-6">
-            <section>
-                <h2 className="font-semibold mb-2">🔓 Decode JWT</h2>
-                <textarea className="w-full border rounded p-2 text-sm" rows={4} placeholder="Paste your JWT token here..." value={token} onChange={(e) => setToken(e.target.value)} />
-                <button className="mt-2 px-4 py-1 bg-blue-600 text-white rounded" onClick={decodeJWT}>
-                    Decode
-                </button>
-                {decoded && <pre className="mt-2 bg-gray-100 p-2 rounded text-xs overflow-x-auto">{JSON.stringify(decoded, null, 2)}</pre>}
-            </section>
+        <>
+            <div className="space-y-6">
+                <section>
+                    <h2 className="font-semibold mb-2">🔓 Decode JWT</h2>
+                    <textarea className="w-full border rounded p-2 text-sm" rows={4} placeholder="Paste your JWT token here..." value={token} onChange={(e) => setToken(e.target.value)} />
+                    <button className="mt-2 px-4 py-1 bg-blue-600 text-white rounded" onClick={decodeJWT}>
+                        Decode
+                    </button>
+                    {decoded && <pre className="mt-2 bg-gray-100 p-2 rounded text-xs overflow-x-auto">{JSON.stringify(decoded, null, 2)}</pre>}
+                </section>
 
-            <hr />
+                <hr />
 
-            <section>
-                <h2 className="font-semibold mb-2">🔐 Encode JWT</h2>
-                <label className="block text-sm mb-1">Header (JSON)</label>
-                <textarea className="w-full border rounded p-2 text-sm" rows={2} value={header} onChange={(e) => setHeader(e.target.value)} />
-                <label className="block text-sm mt-3 mb-1">Payload (JSON)</label>
-                <textarea className="w-full border rounded p-2 text-sm" rows={4} value={payload} onChange={(e) => setPayload(e.target.value)} />
-                <label className="block text-sm mt-3 mb-1">Secret</label>
-                <input className="w-full border rounded p-2 text-sm" type="text" value={secret} onChange={(e) => setSecret(e.target.value)} />
-                <button className="mt-3 px-4 py-1 bg-green-600 text-white rounded" onClick={encodeJWT}>
-                    Encode
-                </button>
-                {encoded && <pre className="mt-2 bg-gray-100 p-2 rounded text-xs break-words whitespace-pre-wrap">{encoded}</pre>}
-            </section>
-        </div>
+                <section>
+                    <h2 className="font-semibold mb-2">🔐 Encode JWT</h2>
+                    <label className="block text-sm mb-1">Header (JSON)</label>
+                    <textarea className="w-full border rounded p-2 text-sm" rows={2} value={header} onChange={(e) => setHeader(e.target.value)} />
+                    <label className="block text-sm mt-3 mb-1">Payload (JSON)</label>
+                    <textarea className="w-full border rounded p-2 text-sm" rows={4} value={payload} onChange={(e) => setPayload(e.target.value)} />
+                    <label className="block text-sm mt-3 mb-1">Secret</label>
+                    <input className="w-full border rounded p-2 text-sm" type="text" value={secret} onChange={(e) => setSecret(e.target.value)} />
+                    <button className="mt-3 px-4 py-1 bg-green-600 text-white rounded" onClick={encodeJWT}>
+                        Encode
+                    </button>
+                    {encoded && <pre className="mt-2 bg-gray-100 p-2 rounded text-xs break-words whitespace-pre-wrap">{encoded}</pre>}
+                </section>
+            </div>
+        </>
     );
 }
