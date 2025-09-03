@@ -30,12 +30,12 @@ export default function Document() {
                     }}
                 ></script>
 
-                {/* <script
+                <script
                     dangerouslySetInnerHTML={{
                         __html: `(function(d,z,s){s.src='https://'+d+'/401/'+z;try{(document.body||document.documentElement).appendChild(s)}catch(e){}})('gizokraijaw.net',9733080,document.createElement('script'))`,
                     }}
-                ></script> */}
-                <script type="text/javascript" src="//pl27558668.revenuecpmgate.com/80/a6/b1/80a6b12cd08488ae8c62dbb28035fdd3.js"></script>
+                ></script>
+                {/* <script type="text/javascript" src="//pl27558668.revenuecpmgate.com/80/a6/b1/80a6b12cd08488ae8c62dbb28035fdd3.js"></script> */}
             </Head>
             <body>
                 <Main />
