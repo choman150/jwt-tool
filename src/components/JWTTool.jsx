@@ -3,6 +3,8 @@
 import { useState } from "react";
 import { SignJWT, jwtVerify, decodeJwt } from "jose";
 import Script from "next/script";
+import dynamic from "next/dynamic";
+const AdsterraBanner = dynamic(() => import("../components/AdsterraBanner"), { ssr: false });
 
 export default function JWTTool() {
     const [token, setToken] = useState("");
@@ -53,6 +55,9 @@ export default function JWTTool() {
                 </section>
 
                 <hr />
+                <div className="ads-center">
+                    <AdsterraBanner adKey="e5914e254014a8a5806f4748a3569462" width={728} height={90} />
+                </div>
 
                 <section>
                     <h2 className="font-semibold mb-2">🔐 Encode JWT</h2>

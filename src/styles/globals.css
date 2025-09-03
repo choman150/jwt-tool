@@ -28,3 +28,47 @@ body {
     color: var(--foreground);
     font-family: Arial, Helvetica, sans-serif;
 }
+
+.ads-left {
+    position: absolute;
+    left: 20px;
+    top: 20px;
+    width: 160px;
+    height: 600px;
+    z-index: 1000;
+}
+
+.ads-right {
+    position: absolute;
+    right: 20px;
+    top: 220px;
+    width: 160px;
+    height: 600px;
+    z-index: 1000;
+}
+
+.ads-center {
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+}
+
+@media only screen and (min-device-width: 320px) and (max-device-width: 480px) {
+    .ads-right {
+        display: none;
+    }
+
+    .ads-left {
+        display: none;
+    }
+
+    .ads-center {
+        width: 100%;
+
+        * {
+            max-width: 100%;
+        }
+    }
+}
